@@ -4,7 +4,7 @@
 
 ```git clone https://github.com/kurdotex/dev.git ```
 
-## Pasos a seguir
+## Pasos a seguir puesta en macha de Api
 
 1. Sobre la raíz del proyecto ejectute ```composer install```
 2. Sobre la raíz del proyecto ejecute ```php artisan migrate```
@@ -12,4 +12,13 @@
     ``` php artisan db:seed --class=UsersTableSeeder ```
 4. Para ejecutar el seeder de productos
     ``` php artisan db:seed --class=ProductsTableSeeder ```
-5. La documentación se encuentra en: ```app/public/doc/index.html```
+5. Sobre la raíz del proyecto ejecute ``` php artisan serve ``` 
+6. La documentación se encuentra en: ```app/public/doc/index.html```
+
+
+## Cron Job
+Sobre la raíz del proyecto ejecute: ```php artisan report:generate ```
+
+## Endpoint Webhook Strapi
+
+``` .../webhook/stripe ```
