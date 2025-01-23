@@ -1,0 +1,980 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "025af87d-c501-4c1c-b91c-1cbee7d17d59",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display Swagger API page.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/documentation",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/documentation"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Display Swagger API page. Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/documentation",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/documentation"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "null"
+                        }
+                    ]
+                },
+                {
+                    "name": "Dump api-docs content endpoint. Supports dumping a json, or yaml file.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "docs\/:jsonFile",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/docs\/:jsonFile",
+                            "variable": [
+                                {
+                                    "id": "jsonFile",
+                                    "key": "jsonFile",
+                                    "value": "ipsam",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Dump api-docs content endpoint. Supports dumping a json, or yaml file. Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "docs\/:jsonFile",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/docs\/:jsonFile",
+                                    "variable": [
+                                        {
+                                            "id": "jsonFile",
+                                            "key": "jsonFile",
+                                            "value": "ipsam",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Unable to generate documentation file to: \\\"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/storage\\\/api-docs\\\/ipsam\\\". Please make sure directory is writable. Error: Required @OA\\\\PathItem() not found\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n    \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Application.php\",\n    \"line\": 1131,\n    \"trace\": [\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/helpers.php\",\n            \"line\": 44,\n            \"function\": \"abort\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/darkaonline\\\/l5-swagger\\\/src\\\/Http\\\/Controllers\\\/SwaggerController.php\",\n            \"line\": 73,\n            \"function\": \"abort\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Controller.php\",\n            \"line\": 54,\n            \"function\": \"docs\",\n            \"class\": \"L5Swagger\\\\Http\\\\Controllers\\\\SwaggerController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/ControllerDispatcher.php\",\n            \"line\": 45,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Route.php\",\n            \"line\": 262,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Route.php\",\n            \"line\": 205,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Router.php\",\n            \"line\": 721,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 128,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/darkaonline\\\/l5-swagger\\\/src\\\/Http\\\/Middleware\\\/Config.php\",\n            \"line\": 44,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"L5Swagger\\\\Http\\\\Middleware\\\\Config\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 103,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Router.php\",\n            \"line\": 723,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Router.php\",\n            \"line\": 698,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Router.php\",\n            \"line\": 662,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Router.php\",\n            \"line\": 651,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 128,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Middleware\\\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Middleware\\\/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Middleware\\\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Middleware\\\/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Middleware\\\/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Middleware\\\/PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/fruitcake\\\/laravel-cors\\\/src\\\/HandleCors.php\",\n            \"line\": 38,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Fruitcake\\\\Cors\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/fideloper\\\/proxy\\\/src\\\/TrustProxies.php\",\n            \"line\": 57,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Fideloper\\\\Proxy\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 103,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Strategies\\\/Responses\\\/ResponseCalls.php\",\n            \"line\": 324,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Strategies\\\/Responses\\\/ResponseCalls.php\",\n            \"line\": 305,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Strategies\\\/Responses\\\/ResponseCalls.php\",\n            \"line\": 76,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Strategies\\\/Responses\\\/ResponseCalls.php\",\n            \"line\": 51,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Strategies\\\/Responses\\\/ResponseCalls.php\",\n            \"line\": 41,\n            \"function\": \"makeResponseCallIfEnabledAndNoSuccessResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Generator.php\",\n            \"line\": 236,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Generator.php\",\n            \"line\": 172,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Generator\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Generator.php\",\n            \"line\": 127,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Generator\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Commands\\\/GenerateDocumentation.php\",\n            \"line\": 119,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Generator\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Commands\\\/GenerateDocumentation.php\",\n            \"line\": 73,\n            \"function\": \"processRoutes\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Container\\\/BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Container\\\/Util.php\",\n            \"line\": 40,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Container\\\/BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Container\\\/BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Container\\\/Container.php\",\n            \"line\": 653,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Console\\\/Command.php\",\n            \"line\": 136,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/symfony\\\/console\\\/Command\\\/Command.php\",\n            \"line\": 298,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Console\\\/Command.php\",\n            \"line\": 121,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/symfony\\\/console\\\/Application.php\",\n            \"line\": 1040,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/symfony\\\/console\\\/Application.php\",\n            \"line\": 301,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/symfony\\\/console\\\/Application.php\",\n            \"line\": 171,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Console\\\/Application.php\",\n            \"line\": 94,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Console\\\/Kernel.php\",\n            \"line\": 129,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "docs\/asset\/{asset}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "docs\/asset\/:asset",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/docs\/asset\/:asset",
+                            "variable": [
+                                {
+                                    "id": "asset",
+                                    "key": "asset",
+                                    "value": "dolor",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "docs\/asset\/{asset} Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "docs\/asset\/:asset",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/docs\/asset\/:asset",
+                                    "variable": [
+                                        {
+                                            "id": "asset",
+                                            "key": "asset",
+                                            "value": "dolor",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"(dolor) - this L5 Swagger asset is not allowed\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n    \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Application.php\",\n    \"line\": 1131,\n    \"trace\": [\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/helpers.php\",\n            \"line\": 44,\n            \"function\": \"abort\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/darkaonline\\\/l5-swagger\\\/src\\\/Http\\\/Controllers\\\/SwaggerAssetController.php\",\n            \"line\": 34,\n            \"function\": \"abort\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Controller.php\",\n            \"line\": 54,\n            \"function\": \"index\",\n            \"class\": \"L5Swagger\\\\Http\\\\Controllers\\\\SwaggerAssetController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/ControllerDispatcher.php\",\n            \"line\": 45,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Route.php\",\n            \"line\": 262,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Route.php\",\n            \"line\": 205,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Router.php\",\n            \"line\": 721,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 128,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/darkaonline\\\/l5-swagger\\\/src\\\/Http\\\/Middleware\\\/Config.php\",\n            \"line\": 44,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"L5Swagger\\\\Http\\\\Middleware\\\\Config\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 103,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Router.php\",\n            \"line\": 723,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Router.php\",\n            \"line\": 698,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Router.php\",\n            \"line\": 662,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/Router.php\",\n            \"line\": 651,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 128,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Middleware\\\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Middleware\\\/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Middleware\\\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Middleware\\\/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Middleware\\\/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Middleware\\\/PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/fruitcake\\\/laravel-cors\\\/src\\\/HandleCors.php\",\n            \"line\": 38,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Fruitcake\\\\Cors\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/fideloper\\\/proxy\\\/src\\\/TrustProxies.php\",\n            \"line\": 57,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Fideloper\\\\Proxy\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Pipeline\\\/Pipeline.php\",\n            \"line\": 103,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Strategies\\\/Responses\\\/ResponseCalls.php\",\n            \"line\": 324,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Strategies\\\/Responses\\\/ResponseCalls.php\",\n            \"line\": 305,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Strategies\\\/Responses\\\/ResponseCalls.php\",\n            \"line\": 76,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Strategies\\\/Responses\\\/ResponseCalls.php\",\n            \"line\": 51,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Strategies\\\/Responses\\\/ResponseCalls.php\",\n            \"line\": 41,\n            \"function\": \"makeResponseCallIfEnabledAndNoSuccessResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Generator.php\",\n            \"line\": 236,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Generator.php\",\n            \"line\": 172,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Generator\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Extracting\\\/Generator.php\",\n            \"line\": 127,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Generator\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Commands\\\/GenerateDocumentation.php\",\n            \"line\": 119,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Generator\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/knuckleswtf\\\/scribe\\\/src\\\/Commands\\\/GenerateDocumentation.php\",\n            \"line\": 73,\n            \"function\": \"processRoutes\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Container\\\/BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Container\\\/Util.php\",\n            \"line\": 40,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Container\\\/BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Container\\\/BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Container\\\/Container.php\",\n            \"line\": 653,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Console\\\/Command.php\",\n            \"line\": 136,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/symfony\\\/console\\\/Command\\\/Command.php\",\n            \"line\": 298,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Console\\\/Command.php\",\n            \"line\": 121,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/symfony\\\/console\\\/Application.php\",\n            \"line\": 1040,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/symfony\\\/console\\\/Application.php\",\n            \"line\": 301,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/symfony\\\/console\\\/Application.php\",\n            \"line\": 171,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Console\\\/Application.php\",\n            \"line\": 94,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Console\\\/Kernel.php\",\n            \"line\": 129,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\\\/media\\\/jose\\\/Elements2\\\/Proyectos\\\/jose\\\/artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Display Oauth2 callback pages.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/oauth2-callback",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/oauth2-callback"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Display Oauth2 callback pages. Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/oauth2-callback",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/oauth2-callback"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "null"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Product Management",
+            "description": "",
+            "item": [
+                {
+                    "name": "List all products.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/list\/products",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/list\/products"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Retrieves a list of all available products.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "List all products. Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/list\/products",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/list\/products"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Retrieves a list of all available products.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"status\": \"success\",\n    \"message\": \"List All Products\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Sample Product\",\n            \"description\": \"This is a sample product.\",\n            \"price\": 99.99,\n            \"stock\": 100,\n            \"created_at\": \"2024-10-08T12:34:56.000000Z\",\n            \"updated_at\": \"2024-10-08T12:34:56.000000Z\"\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a new product.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/product\/store",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/product\/store"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"\\\"Sample Product\\\"\",\n    \"description\": \"\\\"This is a sample product.\\\"\",\n    \"price\": 99.99,\n    \"stock\": 100\n}"
+                        },
+                        "description": "Creates a new product with the provided data.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Store a new product. Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/product\/store",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/product\/store"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"\\\"Sample Product\\\"\",\n    \"description\": \"\\\"This is a sample product.\\\"\",\n    \"price\": 99.99,\n    \"stock\": 100\n}"
+                                },
+                                "description": "Creates a new product with the provided data.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"status\": \"success\",\n    \"message\": \"Product create successfully!\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Sample Product\",\n        \"description\": \"This is a sample product.\",\n        \"price\": 99.99,\n        \"stock\": 100,\n        \"created_at\": \"2024-10-08T12:34:56.000000Z\",\n        \"updated_at\": \"2024-10-08T12:34:56.000000Z\"\n    }\n}"
+                        },
+                        {
+                            "name": "Store a new product. Response #2",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/product\/store",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/product\/store"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"\\\"Sample Product\\\"\",\n    \"description\": \"\\\"This is a sample product.\\\"\",\n    \"price\": 99.99,\n    \"stock\": 100\n}"
+                                },
+                                "description": "Creates a new product with the provided data.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"status\": \"error\",\n    \"message\": \"Validation error.\",\n    \"errors\": {\n        \"name\": [\n            \"The name field is required.\"\n        ]\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get product by ID.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/product\/item\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/product\/item\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Retrieve a specific product by its ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get product by ID. Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/product\/item\/:id",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/product\/item\/:id",
+                                    "variable": [
+                                        {
+                                            "id": "id",
+                                            "key": "id",
+                                            "value": "1",
+                                            "description": "The ID of the product."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Retrieve a specific product by its ID.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"status\": \"success\",\n    \"message\": \"Detail Product by Id\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Sample Product\",\n        \"description\": \"This is a sample product.\",\n        \"price\": 99.99,\n        \"stock\": 100,\n        \"created_at\": \"2024-10-08T12:34:56.000000Z\",\n        \"updated_at\": \"2024-10-08T12:34:56.000000Z\"\n    }\n}"
+                        },
+                        {
+                            "name": "Get product by ID. Response #2",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/product\/item\/:id",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/product\/item\/:id",
+                                    "variable": [
+                                        {
+                                            "id": "id",
+                                            "key": "id",
+                                            "value": "1",
+                                            "description": "The ID of the product."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Retrieve a specific product by its ID.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"status\": \"error\",\n    \"message\": \"error.product_not_found\",\n    \"data\": null\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Stripe Webhook",
+            "description": "\nAPI to handle events sent by Stripe Webhooks.",
+            "item": [
+                {
+                    "name": "Handle events sent by Stripe.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/webhook\/stripe",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/webhook\/stripe"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"payload\": \"{\\\"id\\\":\\\"evt_1Jd2e0E4K29VxRj\\\",\\\"type\\\":\\\"invoice.payment_succeeded\\\",\\\"data\\\":{\\\"object\\\":{\\\"amount_paid\\\":5000}}}\",\n    \"Stripe-Signature\": \"t=1656033445,v1=...,v0=...\"\n}"
+                        },
+                        "description": "This endpoint receives events from Stripe Webhooks and processes the following events:\n- `invoice.payment_succeeded`: Registers the event in the database with details such as `event_id`, `amount_paid`, and `event_date`.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Handle events sent by Stripe. Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/webhook\/stripe",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/webhook\/stripe"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"payload\": \"{\\\"id\\\":\\\"evt_1Jd2e0E4K29VxRj\\\",\\\"type\\\":\\\"invoice.payment_succeeded\\\",\\\"data\\\":{\\\"object\\\":{\\\"amount_paid\\\":5000}}}\",\n    \"Stripe-Signature\": \"t=1656033445,v1=...,v0=...\"\n}"
+                                },
+                                "description": "This endpoint receives events from Stripe Webhooks and processes the following events:\n- `invoice.payment_succeeded`: Registers the event in the database with details such as `event_id`, `amount_paid`, and `event_date`.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"success\": true,\n    \"message\": \"Event successfully registered!\",\n    \"data\": {\n        \"status\": \"success\"\n    }\n}"
+                        },
+                        {
+                            "name": "Handle events sent by Stripe. Response #2",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/webhook\/stripe",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/webhook\/stripe"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"payload\": \"{\\\"id\\\":\\\"evt_1Jd2e0E4K29VxRj\\\",\\\"type\\\":\\\"invoice.payment_succeeded\\\",\\\"data\\\":{\\\"object\\\":{\\\"amount_paid\\\":5000}}}\",\n    \"Stripe-Signature\": \"t=1656033445,v1=...,v0=...\"\n}"
+                                },
+                                "description": "This endpoint receives events from Stripe Webhooks and processes the following events:\n- `invoice.payment_succeeded`: Registers the event in the database with details such as `event_id`, `amount_paid`, and `event_date`.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"success\": false,\n    \"message\": \"Invalid payload\",\n    \"data\": {\n        \"status\": \"error\"\n    }\n}"
+                        },
+                        {
+                            "name": "Handle events sent by Stripe. Response #3",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/webhook\/stripe",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/webhook\/stripe"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"payload\": \"{\\\"id\\\":\\\"evt_1Jd2e0E4K29VxRj\\\",\\\"type\\\":\\\"invoice.payment_succeeded\\\",\\\"data\\\":{\\\"object\\\":{\\\"amount_paid\\\":5000}}}\",\n    \"Stripe-Signature\": \"t=1656033445,v1=...,v0=...\"\n}"
+                                },
+                                "description": "This endpoint receives events from Stripe Webhooks and processes the following events:\n- `invoice.payment_succeeded`: Registers the event in the database with details such as `event_id`, `amount_paid`, and `event_date`.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"success\": false,\n    \"message\": \"Invalid signature\",\n    \"data\": {\n        \"status\": \"error\"\n    }\n}"
+                        },
+                        {
+                            "name": "Handle events sent by Stripe. Response #4",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/webhook\/stripe",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/webhook\/stripe"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"payload\": \"{\\\"id\\\":\\\"evt_1Jd2e0E4K29VxRj\\\",\\\"type\\\":\\\"invoice.payment_succeeded\\\",\\\"data\\\":{\\\"object\\\":{\\\"amount_paid\\\":5000}}}\",\n    \"Stripe-Signature\": \"t=1656033445,v1=...,v0=...\"\n}"
+                                },
+                                "description": "This endpoint receives events from Stripe Webhooks and processes the following events:\n- `invoice.payment_succeeded`: Registers the event in the database with details such as `event_id`, `amount_paid`, and `event_date`.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"success\": false,\n    \"message\": \"Ignored\",\n    \"data\": {\n        \"status\": \"ignored\"\n    }\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "User Management",
+            "description": "\nAPIs for managing users.",
+            "item": [
+                {
+                    "name": "List all users",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/list\/users",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/list\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Get a list of all users in the system.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "List all users Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/list\/users",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/list\/users"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Get a list of all users in the system.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"status\": true,\n    \"message\": \"List All Users\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"John Doe\",\n            \"email\": \"johndoe@example.com\",\n            \"phone_number\": \"123456789\"\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Create a new user",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/store",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/store"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"John Smith\",\n    \"email\": \"johnsmith@example.com\",\n    \"password\": \"password123\",\n    \"phone_number\": \"123456789\"\n}"
+                        },
+                        "description": "Create a new user in the system.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Create a new user Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/user\/store",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/user\/store"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"John Smith\",\n    \"email\": \"johnsmith@example.com\",\n    \"password\": \"password123\",\n    \"phone_number\": \"123456789\"\n}"
+                                },
+                                "description": "Create a new user in the system.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"status\": true,\n    \"message\": \"User created successfully!\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"John Smith\",\n        \"email\": \"johnsmith@example.com\",\n        \"phone_number\": \"123456789\"\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Update a user",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/update\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/update\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Jane Doe\",\n    \"email\": \"janedoe@example.com\",\n    \"password\": \"new_password123\",\n    \"phone_number\": \"987654321\"\n}"
+                        },
+                        "description": "Update the details of a user.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Update a user Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/user\/update\/:id",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/user\/update\/:id",
+                                    "variable": [
+                                        {
+                                            "id": "id",
+                                            "key": "id",
+                                            "value": "1",
+                                            "description": "The ID of the user."
+                                        }
+                                    ]
+                                },
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"Jane Doe\",\n    \"email\": \"janedoe@example.com\",\n    \"password\": \"new_password123\",\n    \"phone_number\": \"987654321\"\n}"
+                                },
+                                "description": "Update the details of a user.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"status\": true,\n    \"message\": \"User updated successfully!\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Jane Doe\",\n        \"email\": \"janedoe@example.com\"\n    }\n}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
