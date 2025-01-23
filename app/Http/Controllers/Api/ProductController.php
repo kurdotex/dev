@@ -119,7 +119,7 @@ class ProductController extends Controller
      *   "data": null
      * }
      */
-    public function getProductById($id)
+    public function getProductById(int $id): JsonResponse
     {
         try{
             $product = Product::find($id);
