@@ -28,8 +28,8 @@ Sigue estos pasos en orden si acabas de clonar el repositorio:
 Abre tu terminal y descarga el proyecto:
 
 ```
-git clone <URL_DE_TU_REPOSITORIO>
-cd <NOMBRE_DEL_PROYECTO>
+git clone https://github.com/kurdotex/dev.git
+cd dev
 ```
 
 ## Configurar las variables de entorno
