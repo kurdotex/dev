@@ -13,7 +13,7 @@ Esta guía detalla los pasos para levantar el entorno de desarrollo local utiliz
 Asegúrate de tener instalado en tu máquina:
 
 - Git
-- Docker y Docker Compose (versión v2 recomendada)
+- Docker y Docker Compose (versión v2 recomendada, usa `docker compose` con espacio)
 
 ---
 
@@ -85,4 +85,32 @@ docker compose exec app php artisan l5-swagger:generate
 ```
 
 
+## 💻 Gestión, Pruebas y Debugging
 
+### 1. Entrar al Contenedor de la Aplicación (PHP/Laravel)
+
+Para ejecutar comandos de Artisan o Composer dentro del entorno de PHP:
+```
+sudo docker compose exec app bash
+```
+
+### 2. Ejecutar Pruebas PHPUnit
+
+Utiliza el binario de PHPUnit instalado para correr los tests funcionales y unitarios.
+
+**Desde dentro del contenedor (una vez ejecutado el comando anterior):**
+```
+./vendor/bin/phpunit
+```
+
+## 🌐 Acceso a la Aplicación
+
+| Servicio | URL |
+| :--- | :--- |
+| Aplicación Web | [http://localhost:8000](http://localhost:8000) |
+| Documentación API (Swagger) | [http://localhost:8000/api/documentation](http://localhost:8000/api/documentation) |
+
+### Regenerar la documentación:
+```
+docker compose exec app php artisan l5-swagger:generate
+```

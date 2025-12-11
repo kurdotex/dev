@@ -162,8 +162,8 @@
                 "tags": [
                     "Orders"
                 ],
-                "summary": "Listar todas las órdenes",
-                "description": "Retorna todas las órdenes con sus ítems",
+                "summary": "Listar las órdenes del usuario autenticado",
+                "description": "Retorna solo las órdenes asociadas al token de usuario actual.",
                 "operationId": "4d6023f48cc098a26386b7ffa651b317",
                 "responses": {
                     "200": {
@@ -572,12 +572,7 @@
                     "500": {
                         "description": "Error del servidor"
                     }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
+                }
             }
         }
     },

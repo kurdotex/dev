@@ -7,6 +7,7 @@ use App\Http\Requests\Order\StoreOrderRequest;
 use App\Models\Order;
 use App\Traits\ApiResponder;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use OpenApi\Annotations as OA;
 
@@ -55,9 +56,9 @@ class OrderController extends Controller
     /**
      * @OA\Get(
      * path="/list/orders",
-     * summary="Listar todas las órdenes",
+     * summary="Listar las órdenes del usuario autenticado",
      * tags={"Orders"},
-     * description="Retorna todas las órdenes con sus ítems",
+     * description="Retorna solo las órdenes asociadas al token de usuario actual.",
      * security={{"bearerAuth":{}}},
      * @OA\Response(
      * response=200,
@@ -74,11 +75,21 @@ class OrderController extends Controller
      * @OA\Response(response=401, description="No autenticado")
      * )
      */
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
+        $user = $request->user();
+
+        if (!$user) {
+             return $this->error('Usuario no autenticado', null, 401);
+        }
+
+        $orders = Order::with('items')
+                       ->where('user_id', $user->id)
+                       ->get();
+
         return $this->success(
             __('List orders'),
-            Order::with('items')->get(),
+            $orders,
         );
     }
 
