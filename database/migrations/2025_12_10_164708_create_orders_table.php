@@ -16,7 +16,7 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained()->onDelete('set null');
-            $table->string('customer_first_name');
+            $table->string('customer_first_name'); //
             $table->string('customer_last_name');
             $table->string('customer_email');
             $table->string('status')->default('pending');

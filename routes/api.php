@@ -44,28 +44,6 @@ use App\Http\Controllers\Api\StripeWebhookController;
 
     Route::group(
         [
-            "prefix" => "/product",
-            "middleware" => []
-        ],
-        function(){
-            Route::post('/store', [ProductController::class, 'store']);
-            Route::get('/item/{id}', [ProductController::class, 'getProductById']);
-        }
-    );
-
-    Route::group(
-        [
-            "prefix" => "/webhook",
-            "middleware" => []
-        ],
-        function() {
-            Route::post('/stripe', [StripeWebhookController::class, 'handle']);
-
-        }
-    );
-
-    Route::group(
-        [
             "prefix" => "/orders",
             "middleware" => []
         ],

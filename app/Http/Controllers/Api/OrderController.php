@@ -142,9 +142,10 @@ class OrderController extends Controller
             });
 
         } catch (\Exception $e) {
+            $this->logError($e, $request->all());
             return $this->error(
-                'Error al procesar la orden',
-                [$e->getMessage()],
+                'Error interno al procesar la orden',
+                null,
                 500
             );
         }
@@ -180,9 +181,14 @@ class OrderController extends Controller
      */
     public function getOrderById($id): JsonResponse
     {
-        return $this->success(
-            'Order Id: ' . $id,
-            Order::with('items')->findOrFail($id),
-        );
+        try {
+            $order = Order::with('items')->findOrFail($id);
+            return $this->success(
+                'Order Id: ' . $id,
+                $order
+            );
+        } catch (\Exception $e) {
+            return $this->error('Orden no encontrada', null, 404);
+        }
     }
 }
