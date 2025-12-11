@@ -19,5 +19,12 @@ use OpenApi\Annotations as OA;
  *     url="http://localhost:8000/api",
  *     description="Servidor local"
  * )
+ *
+ * @OA\SecurityScheme(
+ * securityScheme="bearerAuth",
+ * type="http",
+ * scheme="bearer",
+ * bearerFormat="Sanctum"
+ * )
  */
 class SwaggerConfig {}

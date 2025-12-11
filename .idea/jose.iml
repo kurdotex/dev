@@ -133,6 +133,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/windwalker/renderer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/windwalker/structure" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zircote/swagger-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/sanctum" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

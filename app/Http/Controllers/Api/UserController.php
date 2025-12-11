@@ -38,7 +38,7 @@ class UserController extends Controller
 
     /**
      * @OA\Get(
-     * path="/users",
+     * path="/list/users",
      * summary="Listar todos los usuarios",
      * tags={"Users"},
      * description="Retorna un listado de todos los usuarios registrados",
@@ -74,7 +74,7 @@ class UserController extends Controller
 
     /**
      * @OA\Put(
-     * path="/users/{id}",
+     * path="/user/update/{id}",
      * summary="Actualizar un usuario",
      * tags={"Users"},
      * description="Actualiza la información de un usuario existente",
@@ -150,11 +150,10 @@ class UserController extends Controller
 
     /**
      * @OA\Post(
-     * path="/users",
+     * path="/user/store",
      * summary="Crear un nuevo usuario",
      * tags={"Users"},
      * description="Registra un nuevo usuario en la base de datos",
-     * security={{"bearerAuth":{}}},
      * @OA\RequestBody(
      * required=true,
      * description="Datos para crear el usuario",
