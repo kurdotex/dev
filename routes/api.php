@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\OrderController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UserController;
@@ -57,9 +58,23 @@ use App\Http\Controllers\Api\StripeWebhookController;
             "prefix" => "/webhook",
             "middleware" => []
         ],
-        function(){
+        function() {
             Route::post('/stripe', [StripeWebhookController::class, 'handle']);
 
         }
     );
+
+    Route::group(
+        [
+            "prefix" => "/orders",
+            "middleware" => []
+        ],
+        function() {
+            Route::get('/', [OrderController::class, 'index']);
+            Route::post('/', [OrderController::class, 'store']);
+            Route::get('/{id}', [OrderController::class, 'getOrderById']);
+        }
+    );
+
+
 

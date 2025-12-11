@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStripeEventsTable extends Migration
+class CreateOrderItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateStripeEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('stripe_events', function (Blueprint $table) {
+        Schema::create('order_items', function (Blueprint $table) {
             $table->id();
-            $table->string('event_id')->unique();
-            $table->decimal('amount_paid', 10, 2);
-            $table->timestamp('event_date');
+            $table->unsignedBigInteger('order_id')->constrained()->onDelete('cascade');
+            $table->string('product_name');
+            $table->integer('quantity');
+            $table->string('unit_price', 10,2);
             $table->timestamps();
-        });;
+        });
     }
 
     /**
@@ -29,6 +30,6 @@ class CreateStripeEventsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stripe_events');
+        Schema::dropIfExists('order_items');
     }
 }

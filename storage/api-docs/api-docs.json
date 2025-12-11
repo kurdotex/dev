@@ -1,0 +1,263 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Dev API",
+        "description": "Documentación de la API Dev.",
+        "contact": {
+            "email": "jose.vivas.ar@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000/api",
+            "description": "Servidor local"
+        },
+        {
+            "url": "/var/www/html/dev"
+        }
+    ],
+    "paths": {
+        "/orders": {
+            "get": {
+                "tags": [
+                    "Orders"
+                ],
+                "summary": "Listar todas las órdenes",
+                "description": "Retorna todas las órdenes con sus ítems",
+                "operationId": "8f3183bfa0ecb8a2c864cbf972b8061d",
+                "responses": {
+                    "200": {
+                        "description": "Listado de órdenes",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "List orders"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Order"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Orders"
+                ],
+                "summary": "Crear una nueva orden",
+                "description": "Crea una orden con sus ítems calculando el total automáticamente",
+                "operationId": "b6490f9d9026dbe871b41207e118fffb",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "customer_first_name",
+                                    "customer_last_name",
+                                    "customer_email",
+                                    "payment_method",
+                                    "items"
+                                ],
+                                "properties": {
+                                    "customer_first_name": {
+                                        "type": "string",
+                                        "example": "Carlos"
+                                    },
+                                    "customer_last_name": {
+                                        "type": "string",
+                                        "example": "Gomez"
+                                    },
+                                    "customer_email": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "cliente@email.com"
+                                    },
+                                    "payment_method": {
+                                        "type": "string",
+                                        "example": "credit_card"
+                                    },
+                                    "user_id": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "items": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/components/schemas/OrderItem"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Orden creada exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Store Order"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Order"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Error de validación"
+                    },
+                    "500": {
+                        "description": "Error interno del servidor"
+                    }
+                }
+            }
+        },
+        "/orders/{id}": {
+            "get": {
+                "tags": [
+                    "Orders"
+                ],
+                "summary": "Obtener una orden específica",
+                "description": "Busca una orden por ID y retorna sus detalles e ítems",
+                "operationId": "2799fbc257975cd8d237a22df0d5c4fe",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de la orden",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Orden encontrada",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Order Id: 1"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Order"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Orden no encontrada"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Order": {
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "user_id": {
+                        "type": "integer",
+                        "example": 3
+                    },
+                    "customer_first_name": {
+                        "type": "string",
+                        "example": "Carlos"
+                    },
+                    "customer_last_name": {
+                        "type": "string",
+                        "example": "Gomez"
+                    },
+                    "customer_email": {
+                        "type": "string",
+                        "example": "cliente@email.com"
+                    },
+                    "payment_method": {
+                        "type": "string",
+                        "example": "credit_card"
+                    },
+                    "status": {
+                        "type": "string",
+                        "example": "pending"
+                    },
+                    "total_amount": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 299.99
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/OrderItem"
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "OrderItem": {
+                "title": "Order Item",
+                "description": "Item dentro de una orden",
+                "properties": {
+                    "product_id": {
+                        "title": "Product ID",
+                        "type": "integer",
+                        "example": 12
+                    },
+                    "quantity": {
+                        "title": "Quantity",
+                        "type": "integer",
+                        "example": 3
+                    },
+                    "unit_price": {
+                        "title": "Unit price",
+                        "type": "number",
+                        "example": 99.99
+                    },
+                    "subtotal": {
+                        "title": "Subtotal",
+                        "type": "number",
+                        "example": 299.97
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Orders",
+            "description": "Orders"
+        }
+    ]
+}
