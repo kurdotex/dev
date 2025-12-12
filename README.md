@@ -9,6 +9,22 @@ Asegúrate de tener instalado en tu máquina:
 - Git
 - Docker y Docker Compose (versión v2 recomendada, usa `docker compose` con espacio)
 
+
+## ⚙️ Valores Clave del Archivo .env (Docker y Base de Datos)
+
+| Variable | Valor de Desarrollo Típico | Notas Importantes (Docker) |
+| :--- | :--- | :--- |
+| `APP_ENV` | `local` | Entorno de la aplicación. |
+| `APP_DEBUG` | `true` | Muestra errores detallados. |
+| `DB_CONNECTION` | `mysql` | Driver de la base de datos. |
+| `DB_HOST` | **`db`** | **Debe ser el nombre del servicio** del contenedor MySQL, NO `localhost`.  |
+| `DB_PORT` | `3306` | Puerto de la base de datos. |
+| `DB_DATABASE` | `laravel` | Nombre de la base de datos. |
+| `DB_USERNAME` | `root` | Usuario de la base de datos. |
+| `DB_PASSWORD` | `secret` | Contraseña de la base de datos. |
+| `APP_URL` | `http://localhost:8000` | URL base de la aplicación. |
+
+
 ## 🚀 Pasos de Instalación 
 
 Sigue estos pasos en estricto orden para inicializar el proyecto:
@@ -43,13 +59,15 @@ docker compose exec app php artisan config:clear
 ```
 
 ### 💻 Gestión, Pruebas y Acceso
-1. Acceso a la Aplicación y Documentación
-```
-   http://localhost:8000
-```
+1. Url Base API
+   http://localhost:8000/api
 
-2. Servicio URLAplicación Web (Vue SPA). Documentación API (Swagger)
- ```
+
+2. Documentación API (Swagger)
  http://localhost:8000/api/documentation
-```
+
  
+### Ejecutar Pruebas PHPUnit
+ ```
+docker compose exec app ./vendor/bin/phpunit
+```
