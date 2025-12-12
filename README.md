@@ -33,6 +33,9 @@ Sigue estos pasos en estricto orden para inicializar el proyecto:
 # 1. Clonar el repositorio y moverse al directorio
 ```
 git clone [https://github.com/kurdotex/dev.git](https://github.com/kurdotex/dev.git)
+```
+
+```
 cd dev
 ```
 
