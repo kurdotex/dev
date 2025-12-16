@@ -63,6 +63,12 @@ docker compose exec app php artisan key:generate
 docker compose exec app php artisan migrate
 ```
 
+# PERMISOS 
+```
+sudo chown -R $USER:$USER
+sudo chmod -R 775 storage bootstrap/cache
+```
+
 # Generar la documentación Swagger/OpenAPI
 ```
 docker compose exec app php artisan l5-swagger:generate
@@ -81,6 +87,10 @@ docker compose exec app php artisan config:clear
 2. Documentación API (Swagger)
  http://localhost:8000/api/documentation
 
+3.  Datos de prueba
+```
+docker compose exec app php artisan tinker --execute "App\Models\User::factory()->create(['email' => 'admin@test.com', 'password' => bcrypt('password')]);"
+```
  
 ### Ejecutar Pruebas PHPUnit
  ```
